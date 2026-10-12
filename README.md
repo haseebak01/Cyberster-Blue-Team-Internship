@@ -14,10 +14,10 @@ To execute threat simulations without risk to production assets, I built an isol
 
 | Verification Point | Infrastructure Metric Evidence |
 | :--- | :--- |
-| **Containerization Engine Monitoring (`docker ps`)** | ![Screenshot 11](images/9.png) |
-| **Hypervisor Interface Segmentation** | ![Screenshot 7](images/5.png) |
-| **Attacker Network Adaptor Matrix (`ip a`)** | ![Screenshot 6](images/4.png) |
-| **Comprehensive Infrastructure Diagram** | ![Screenshot 8](images/6.png) |
+| **Containerization Engine Monitoring (`docker ps`)** | ![Container Status](images/9.png) |
+| **Hypervisor Interface Segmentation** | ![VMware Settings](images/5.png) |
+| **Attacker Network Adaptor Matrix (`ip a`)** | ![Kali IP Matrix](images/4.png) |
+| **Comprehensive Infrastructure Diagram** | ![Network Diagram](images/6.png) |
 
 ---
 
@@ -49,7 +49,7 @@ Before running simulations, I fine-tuned the target endpoint's ingestion profile
 
 | Verification Point | Configuration Control Evidence |
 | :--- | :--- |
-| **Wazuh Agent XML Configuration Workspace** | ![Screenshot 10](images/screenshot_10.png) |
+| **Wazuh Agent XML Configuration Workspace** | ![Agent Configuration](images/8.png) |
 
 ---
 
@@ -59,11 +59,11 @@ Leveraging offensive methodologies learned during my CEH studies, I initiated ac
 
 ### Phase 3.1: Attack-Surface Asset Mapping
 An initial probe was launched via Nmap from the attack machine to uncover listening ports on the target segment, identifying open services on ports `22/tcp` (SSH), `443/tcp` (HTTPS), and `9200/tcp` (Wap-Wsp):
-![Screenshot 9](images/9.png)
+![Nmap Scan Output](images/7.png)
 
 ### Phase 3.2: Automated SSH Password Spraying
 Next, I launched an automated dictionary attack via Hydra, targeting a known system profile (`yourfather`) using a tailored wordlist to generate high-frequency authentication tracking entries:
-![Screenshot 5](images/3.png)
+![Hydra Attack Execution](images/3.png)
 
 ---
 
@@ -98,7 +98,7 @@ The code block below highlights the critical telemetry indicators parsed by the 
 
 | Verification Point | SIEM Dashboard Evidence Artifacts |
 | :--- | :--- |
-| **Wazuh Dashboard Metric Event & Source IP Isolation** | ![Screenshot 3](images/screenshot_3.png) |
+| **Wazuh Dashboard Metric Event & Source IP Isolation** | ![Wazuh Alert Event](images/1.png) |
 
 ---
 
@@ -133,7 +133,7 @@ I recommend immediately blocking the source IP 192.168.56.15 at the firewall and
 
 | Verification Point | Incident Management Evidence |
 | :--- | :--- |
-| **L1 Escalation Documentation Workspace** | ![Screenshot 4](images/2.png) |
+| **L1 Escalation Documentation Workspace** | ![Escalation Report Ticket](images/2.png) |
 
 ---
 
